@@ -73,3 +73,15 @@ b = 0
 # int() - rzutowanie na int
 # zamieniamy na liczby by wykonać matematyczne działanie
 print(int(a) + int(b))  # 1
+
+tekst = "Witaj Świecie"
+print(tekst)
+
+# teksty są niemutowalne
+#  """ Return a copy of the string converted to uppercase. """
+print(tekst.upper())  # WITAJ ŚWIECIE, wypisało, nie zapamiętało zmian
+nowy_tekst = tekst.upper()  # zapamiętanie zmiany w nowej zmiennej
+print(nowy_tekst)  # wypisanie zmiany z tej zmiennej, WITAJ ŚWIECIE
+
+zmienna1 = "GROSS"
+zmienna2 = "groẞ"
