@@ -26,6 +26,7 @@ sheet = workbook.active  # ustawiamy aktywny arkusz
 print(sheet)  # wyswietlamu nazwę tego arkusza, <Worksheet "Sheet">
 print(sheet['A1'].value)  # wypisanie wartości z komórki A1, tu: 42
 
+# ctrl alt l, (cmd, opt, l) - formatowanie kodu
 # wypisanie wierszy excela
 for row in sheet.iter_rows(min_row=1, max_row=3):  # wiersze
     for cell in row:  # wszystkie kolumny
