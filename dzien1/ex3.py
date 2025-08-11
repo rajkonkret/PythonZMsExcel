@@ -15,4 +15,6 @@ total_sales = ((ws.cell(row=row_position, column=col_position).value)
                + (ws.cell(row=row_position, column=col_position + 3).value)
                )
 
-
+ws.cell(row=2, column=11).value = total_sales
+wb.save("video2.xlsx")
+wb.close()
