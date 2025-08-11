@@ -18,3 +18,4 @@ for i in range(1, ws.max_row):
     ws.cell(row=row_position, column=12).value = total_series
 
 wb.save(filename)
+wb.close()
