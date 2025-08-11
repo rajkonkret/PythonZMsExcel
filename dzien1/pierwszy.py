@@ -135,3 +135,61 @@ print(f"Nasza duża liczba: {zysk:_}".replace("_", " "))  # Nasza duża liczba: 
 zysk = 890_098_765_432
 print(type(zysk))  # <class 'int'>, całkowita
 print(zysk)  # 890098765432
+
+# kolekcje - dowolna ilośc elementów
+# lista - przechowuje elementy z zachowaniem kolejności
+lista = [4, 2, 8, 1, 90, "Radek"]
+print(lista)  # [4, 2, 8, 1, 90, 'Radek']
+
+# dodawanie elementów do listy
+lista.append("Dawid")
+lista.append("Klaudia")
+lista.append("Justyna")
+lista.append("Maciej")
+lista.append("Mateusz")
+lista.append("Włodek")
+lista.append("Radek")
+print(lista)
+# [4, 2, 8, 1, 90, 'Radek', 'Dawid', 'Klaudia', 'Justyna', 'Maciej', 'Mateusz', 'Włodek', 'Radek']
+
+# usunięcie z listy
+lista.remove("Radek")  # usnięcie pierewszego napotkanego
+# zmienia zawartośc oryginalnej listy
+print(lista)
+# [4, 2, 8, 1, 90, 'Dawid', 'Klaudia', 'Justyna', 'Maciej', 'Mateusz', 'Włodek', 'Radek']
+
+lista_copy = lista.copy()  # skopiowanie do nowej listy
+lista_k = lista  # kopia referencji, to bedzie ta sama lista pod różnymi nazwami!!!
+pusta_lista = []  # pusta lista
+
+# krotka (tuple) - lista do odczytu, nie mozna zmimenic kolekcji
+# pozwala lepiej zarządzac pamięcią w pythonnie
+krotka = tuple(lista_copy)
+print(krotka)
+print(type(krotka))  # <class 'tuple'>
+tupla1 = "Radek", "Tomek"
+print(tupla1)  # nawias okrągły: ('Radek', 'Tomek')
+
+# zbiór, set
+# przechowania unikalnych wartości
+lista = [2, 5, 6, 8, 6, 7, 8, 5, 9]
+zbior = set(lista)  # zamiana listy na zbiór
+print(zbior)  # {2, 5, 6, 7, 8, 9}
+# nie zachowuje kolejnosci przy zmianie
+# dopisanie do zbioru
+zbior.add(15)
+print(zbior)  # {2, 5, 6, 7, 8, 9, 15}
+
+# slownik - klucz - wartosc
+slownik = {"name": "Radek", "age": 56}
+print(type(slownik))
+print(slownik)  # {'name': 'Radek', 'age': 56}
+slownik_tabela = {"name": ["Radek", "Tomek", "Zenek"]}
+# name
+# Radek
+# Tomek
+# Zenek
+
+print(slownik.keys())  # dict_keys(['name', 'age'])
+print(slownik.values())  # dict_values(['Radek', 56])
+print(slownik.items())  # dict_items([('name', 'Radek'), ('age', 56)])
