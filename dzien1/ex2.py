@@ -61,3 +61,23 @@ pprint(my_list)
 #  (8, 'Wii Play', 'Wii', 2006, 'Misc', 'Nintendo'),
 #  (9, 'New Super Mario Bros. Wii', 'Wii', 2009, 'Platform', 'Nintendo'),
 #  (10, 'Duck Hunt', 'NES', 1984, 'Shooter', 'Nintendo')]
+
+for ele1, ele2, ele3, ele4, ele5, ele6 in my_list:
+    print(f"{ele1:<8}{ele2:>35}{ele3:^10}{ele4:<10}{ele5:<15}{ele6:<15}")
+# Rank                                   Name Platform Year      Genre          Publisher
+# 1                                Wii Sports   Wii    2006      Sports         Nintendo
+# 2                         Super Mario Bros.   NES    1985      Platform       Nintendo
+# 3                            Mario Kart Wii   Wii    2008      Racing         Nintendo
+# 4                         Wii Sports Resort   Wii    2009      Sports         Nintendo
+# 5                  Pokemon Red/Pokemon Blue    GB    1996      Role-Playing   Nintendo
+# 6                                    Tetris    GB    1989      Puzzle         Nintendo
+# 7                     New Super Mario Bros.    DS    2006      Platform       Nintendo
+# 8                                  Wii Play   Wii    2006      Misc           Nintendo
+# 9                 New Super Mario Bros. Wii   Wii    2009      Platform       Nintendo
+# 10                                Duck Hunt   NES    1984      Shooter        Nintendo
+
+# dopisanie nowej kolumny
+ws['K1'] = "Sum of Sales"
+
+wb.save("video2.xlsx")
+wb.close()
