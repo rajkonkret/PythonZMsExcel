@@ -12,7 +12,7 @@ data = [
 column_names = ['Name', "Height"]
 df = pd.DataFrame(data, columns=column_names)
 writer = pd.ExcelWriter("excel_with_list.xlsx", engine='xlsxwriter')
-
+# xlsxwriter - inny silnik do zapisu danych do pliku xlsx
 # df.to_excel(writer)
 # df.to_excel(writer, index=False) # bez indeksu
 # df.to_excel(writer, sheet_name='first_sheet', index=False) # nadanie nazwy arkuszowi
