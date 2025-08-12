@@ -41,3 +41,9 @@ ws['U2'] = '=CEILING(S2, 1)'  # do najblizszej całkowitej, 1308.9 -> 1309
 
 wb.save('video2.xlsx')
 wb.close()
+
+ws['V1'] = "Rounded"
+ws['V2'] = '=ROUND(S2,0)'
+
+wb.save('video2.xlsx')
+wb.close()
