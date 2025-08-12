@@ -16,3 +16,10 @@ ws['Q2'] = "=COUNTA(E2:E16220)"
 
 wb.save('video2.xlsx')
 wb.close()
+
+ws['R1'] = "Number of rows with Sports Genre"
+ws['R2'] = '=COUNTIF(E2:E16620, "sports")'
+
+wb.save('video2.xlsx')
+wb.close()
+
