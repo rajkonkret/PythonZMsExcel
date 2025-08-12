@@ -56,5 +56,22 @@ ws.conditional_formatting.add(
                font=Font(color='FF00FF'))
 )
 
+fill_gt = PatternFill(
+    start_color='70EE90',
+    end_color='70EE90',
+    fill_type="solid"
+)
+
+# ["solid", "darkDown", "darkGray", "darkGrid", "darkHorizontal", "darkTrellis", "darkUp", "darkVertical", "gray0625",
+#  "gray125", "lightDown", "lightGray", "lightGrid", "lightHorizontal", "lightTrellis", "lightUp", "lightVertical",
+#  "mediumGray", "none"]
+ws.conditional_formatting.add(
+    'G2:L16599',
+    CellIsRule(operator="greaterThan",
+               formula=[8],
+               fill=fill_gt,
+               font=Font(color='FF0000'))
+)
+
 wb.save('video2.xlsx')
 wb.close()
