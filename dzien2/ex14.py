@@ -10,6 +10,7 @@ df = pd.DataFrame({
 
 # kontekst menadżer
 with pd.ExcelWriter("Tabela.xlsx", engine="xlsxwriter") as writer:
+# with pd.ExcelWriter("Tabela.xlsx") as writer:
     df.to_excel(writer, sheet_name="Osoby", startrow=1, header=False, index=False)
 
     workbook = writer.book
