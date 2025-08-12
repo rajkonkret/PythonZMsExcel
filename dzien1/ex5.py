@@ -9,11 +9,12 @@ ws = wb['vgsales']
 
 # nowy wiersz
 new_row = (1, "The Legend of Zelda", 1986, 'Action', "Nintendo", 3.74, 0.93, 1.69, 0.14, 6.51, 6.5)
-ws.append(new_row)
+ws.append(new_row) # dodanie wiersza
 
-# wb.save(filename)
-# wb.close()
+wb.save(filename)
+wb.close()
 
+# ponowne odczytanie pliku
 wb = openpyxl.load_workbook(filename)
 ws = wb.active
 
