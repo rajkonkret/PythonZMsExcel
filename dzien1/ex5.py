@@ -17,7 +17,6 @@ ws.append(new_row)
 wb = openpyxl.load_workbook(filename)
 ws = wb.active
 
-ws = wb['vgsales']
 # odczyt wiersza z arkusza
 ws = wb['vgsales']
 values = [ws.cell(row=ws.max_row, column=i).value for i in range(1, ws.max_column + 1)]
@@ -27,7 +26,7 @@ print(values)
 # # usunięcie jedego wiersza (ostatni)
 # ws.delete_rows(ws.max_row - 1, 1)
 # ws.delete_rows(ws.max_row + 1, 1)
-ws.delete_rows(ws.max_row, 1)
+ws.delete_rows(ws.max_row, 1) # ostatni
 
 wb.save(filename)
 wb.close()
