@@ -30,7 +30,31 @@ ws['A1'].fill = PatternFill('lightVertical', start_color='38e3ff')
 # FILL_PATTERN_LIGHTHORIZONTAL = 'lightHorizontal'
 # FILL_PATTERN_LIGHTTRELLIS = 'lightTrellis'
 # FILL_PATTERN_LIGHTUP = 'lightUp'
-# FILL_PATTERN_LIGHTVERTICAL = 'lightVertical'
+# FILL_PATTERN_LIGHTVERTICAL = 'lightVertical'  ----
 # FILL_PATTERN_MEDIUMGRAY = 'mediumGray'
+
+# ramka
+my_border = Side(border_style='thin', color='000000')  # czarny
+ws['A1'].border = Border(
+    top=my_border, left=my_border, right=my_border, bottom=my_border
+)
+
+# oznaczenie wyfiltrowanych danych
+fill = PatternFill(
+    start_color='90EE90',
+    end_color='90EE90',
+    fill_type="solid"
+)
+
+# {">": "greaterThan", ">=": "greaterThanOrEqual", "<": "lessThan", "<=": "lessThanOrEqual",
+#               "=": "equal", "==": "equal", "!=": "notEqual"}
+ws.conditional_formatting.add(
+    'G2:L16599',
+    CellIsRule(operator="lessThan",
+               formula=[5],
+               fill=fill,
+               font=Font(color='FF00FF'))
+)
+
 wb.save('video2.xlsx')
 wb.close()
