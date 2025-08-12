@@ -10,3 +10,9 @@ ws['P2'] = '= AVERAGE(L2:L16199)'  # =ŚREDNIA(L2:L16199)
 
 wb.save('video2.xlsx')
 wb.close()
+
+ws['Q1'] = 'Number of populated cells'
+ws['Q2'] = "=COUNTA(E2:E16220)"
+
+wb.save('video2.xlsx')
+wb.close()
