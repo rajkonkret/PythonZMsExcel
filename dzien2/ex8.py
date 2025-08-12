@@ -23,5 +23,33 @@ ws = wb.active
 # ws = wb.active
 # print(ws.title)  # Total Sales by Genre
 # ctrl / - komentowanie
-ws = wb['Video Games Sales Data']
-ws['A1'].font =
+
+# formatowanie tekstu w pierwszym wierszu
+# ws = wb['Video Games Sales Data']
+# ws['A1'].font = Font(bold=True, size=12)
+#
+# for cell in ws[1:1]:
+#     cell.font = Font(bold=True, size=12)
+#
+# wb.save('video2.xlsx')
+# wb.close()
+
+# dodanie arkusza do pliku
+print(wb.sheetnames)
+# wb.create_sheet("Empty Sheet")
+# print(wb.sheetnames)
+# # ['Video Games Sales Data', 'Total Sales by Genre', 'Breakdown of Sales by Genre', 'Breakdown of Sales by Year', 'Empty Sheet']
+#
+# wb.save('video2.xlsx')
+# wb.close()
+
+# usunięcie arkusza z pliku
+# wb.remove(wb['Empty Sheet'])
+# print(wb.sheetnames)
+# wb.save('video2.xlsx')
+# wb.close()
+
+# kopiowanie arkusza
+wb.copy_worksheet(wb['Video Games Sales Data'])
+wb.save('video2_kopia.xlsx')
+wb.close()
