@@ -10,7 +10,7 @@ ws = wb['Total Sales by Genre']
 values = Reference(ws,
                    min_col=2,
                    max_col=2,
-                   min_row=1,
+                   min_row=2,
                    max_row=13)
 
 cats = Reference(ws,
